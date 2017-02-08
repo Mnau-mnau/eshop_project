@@ -2,6 +2,16 @@
 
 class router 
 {
+
+    public static function runController($controller_name)
+    {
+        //get the path to the proper controller file based on the controller name 
+        $controller_file = static::getControllerFile($controller_name);
+
+        //include the file
+        include $controller_file;
+    }
+    
     //find the name of the page to display in URL and determine the right NAME of the controller to use
     public static function getControllerName()
     {
