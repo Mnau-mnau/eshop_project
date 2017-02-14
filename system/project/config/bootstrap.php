@@ -32,10 +32,20 @@ require_once(CORE_LIBRARIES_DIR.'/request.class.php');
 require_once(CORE_LIBRARIES_DIR.'/router.class.php');
 require_once(CORE_LIBRARIES_DIR.'/config.class.php');
 require_once(CORE_LIBRARIES_DIR.'/url.class.php');
+require_once(CORE_LIBRARIES_DIR.'/view.class.php');
+require_once(CORE_LIBRARIES_DIR.'/presenter.class.php');
+require_once(CORE_LIBRARIES_DIR.'/db.class.php');
+require_once(CORE_LIBRARIES_DIR.'/model.class.php');
 
+//load the model libraries
+require_once(MODELS_DIR.'/product.model.php');
+require_once(MODELS_DIR.'/product.object.php');
 
 //load the project config
 config::load();
+
+//some funky functions for debugging
+
 
 
 

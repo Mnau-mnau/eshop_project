@@ -1,28 +1,20 @@
 <?php
 
+$name = request::post('name');
+$email = request::post('email', '');
+$text = request::post('message', '');
+$newsletter = request::post('newsletter', '0');
+
+$form_view = new view('contact/form');
+
+$form_view->email = $email;
+$form_view->name = $name;
+$form_view->message = $text;
+$form_view->newsletter = $newsletter;
+//example of retrieving the rendered html and not printing it
+//$html = $form_view->render(false);\
+
+presenter::setTitle('Contact');
+presenter::present($form_view);
 
 
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Some page</title>
-        <style>
-            form{
-                background-color: pink;
-                padding:10px;
-                width: 200px;
-            }
-            input{
-                margin:5px;
-            }
-        </style>
-    </head>
-    <body>
-
-        <h1> Something else </h1>
-
-    </body>
-</html>
