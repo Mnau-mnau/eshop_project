@@ -3,8 +3,10 @@
 class presenter
 {
     protected static $title = null;
-    public static function present($content){
-        //navigation of the page
+
+    public static function present($content)
+    {
+        //navigation of the page template
         $navigation = new view('navigation'); //  /system/project/views/navigation.php
         //definitely the page needs footer
         $footer = new view('footer');

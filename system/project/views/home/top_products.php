@@ -6,7 +6,6 @@
     <ul>
         <?php foreach($products as $product): ?>
         <li>
-            something
             <a href="<?php echo $product->getUrl();?>"> </a>
             <div class="name"><?php echo($product->name); ?></div>
             <div class="price"><?php echo $product->price; ?></div>
@@ -14,4 +13,5 @@
         <?php endforeach; ?>
     </ul>
 
-    </div>
+    <a class="btn btn-success" href="<?php echo url::to('products');?>">Show more products</a>
+</div>

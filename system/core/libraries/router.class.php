@@ -17,7 +17,13 @@ class router
     {
         //get the name of the page from URL 
         $page_name = request::get('page', 'home');
+        //$page_uri = $_SERVER['REQUEST_URI'];//get the uri of the current page
+        //$url_parts = explode('/',$page_uri);//break it into parts
+        //$page_name = array_pop($url_parts);//gets the last part (contact from www.site.com/contact)
         //get the path to the proper controller file based on the page name
+
+        //if(trim($page_name)=='') $page_name = 'home';//if none was specified, make ot home
+
         $controller_file = static::getControllerFile($page_name);
         //if such  a controller exists
         if(file_exists($controller_file))

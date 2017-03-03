@@ -2,15 +2,6 @@
 
 class config {
     protected static $data = array();
-    /*
-        'base_url' => 'http://eshop.local',
-        'db_host' => 'localhost',
-        'db_name' => 'classproject',
-        'db_user' => 'root',
-        'db_pass' => '',
-        'administrator' => null,
-        'site_title' => 'My amazing eshop',
-    */
 
     public static function get($key, $default = null){
         if(array_key_exists($key, static::$data)) 
@@ -39,5 +30,4 @@ class config {
     }
 }
 
-// serves for calling data sources like this: 
-$host = config::get('db_host'); //localhost
+

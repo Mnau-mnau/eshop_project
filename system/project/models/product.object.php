@@ -4,7 +4,7 @@ class Product_Object
 {
     public function getUrl()
     {
-        return url::to('product', array(
+        return url::to('detail', array(
             'id' => $this->id
         ));
     }

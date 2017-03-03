@@ -3,8 +3,8 @@
 //our class for connecting to the database
 //it allows simple running of SQL queries
 //it will use information from our config file
-class db{
-
+class db
+{
     //$pdo stores the database connection information
     protected static $pdo = null;
     //

@@ -22,12 +22,12 @@ class view
         if($print)
         {
             //echo the content of the file
-            include (VIEWS_DIR.'/'. $this->template_name. '.php');
+            echo $rendered_content;
         }
         else
         {
             //return the contents of the file
-            return $this->getRenderedContent();
+            return $rendered_content;
         }
     }
     protected function getRenderedContent()

@@ -4,7 +4,9 @@
     <ul>
       <?php foreach($categories as $category):?>
       <li>
-          <?php var_dump($category);?>
+            <a href="<?php echo $category->getUrl();?>">
+            <?php echo ($category->name);?>
+            </a>
       </li>
       <?php endforeach; ?>
     </ul>

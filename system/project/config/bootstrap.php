@@ -38,15 +38,36 @@ require_once(CORE_LIBRARIES_DIR.'/db.class.php');
 require_once(CORE_LIBRARIES_DIR.'/model.class.php');
 
 //load the model libraries
+require_once(MODELS_DIR.'/addproduct.model.php');
+require_once(MODELS_DIR.'/addproduct.object.php');
 require_once(MODELS_DIR.'/product.model.php');
 require_once(MODELS_DIR.'/product.object.php');
+require_once(MODELS_DIR.'/category.model.php');
+require_once(MODELS_DIR.'/category.object.php');
+require_once(MODELS_DIR.'/login.model.php');
+require_once(MODELS_DIR.'/login.object.php');
 
 //load the project config
 config::load();
 
 //some funky functions for debugging
 
+//goes through the models directory, so we don't have to add it manualy
+// $files = scandir(MODELS_DIR);
+// foreach($files as $file)
+// {
+//     if($file == '.' || $file == '..') continue;
+//     if(pathinfo($filename, PATHINFO_EXTENSION) == 'php')
+//     {
+//         require_once MODELS_DIR . '/'. $file;
+//     }
+// }
 
+//correct the code!!
 
-
+//function myAutoload($className)
+//{
+//    require_once(CORE_LIBRARIES_DIR.'/'.$className.'.class.php');
+//};
+//spl_autoload_register('myAutoload');
 ?>
